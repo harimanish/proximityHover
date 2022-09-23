@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" href="./src/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vite + TS</title>
+        <style>
+            body {
+                background-color: black;
+                color: white;
+                padding: 0;
+                margin: 0;
+            }
+            main {
+                display: grid;
+                place-items: center;
+                min-height: 100vh;
+                position: relative;
+            }
+            #sourc {
+                width: 20rem;
+            }
+            #eyes,
+            #eyes img {
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <img id="sourc" src="./src/img/randm.png " />
+            <div id="eyes">
+                <img
+                    class="eye"
+                    src="./src/img/eyes.png"
+                    style="top: -4px; left: -49px; width: 60px"
+                />
+                <img
+                    class="eye"
+                    src="./src/img/eyes.png"
+                    style="top: -16px; left: 38px; width: 60px"
+                />
+            </div>
+        </main>
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
