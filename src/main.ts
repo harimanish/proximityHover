@@ -1,9 +1,9 @@
 import './style.css'
 const eyes=document.querySelectorAll<HTMLElement>(".eye");
-const anchor=document.getElementById<HTMLElement>("sourc");
+const anchor=document.getElementById("sourc");
 const rekt=anchor?.getBoundingClientRect();
-const anchorx:any=rekt.left+rekt.width/2;
-const anchory:any=rekt.top+rekt.height/2; 
+const anchorx:any=rekt?.left?+rekt.width/2:0;
+const anchory:any=rekt?.top?+rekt.height/2:0; 
 document.addEventListener('mousemove',(e)=>{
   
   const x=e.clientX;
@@ -15,7 +15,7 @@ document.addEventListener('mousemove',(e)=>{
    
   eyes.forEach(eye=>{
     eye.style.transform=`rotate(${angleDeg}deg)`;
-    anchor.style.filter=`hue-rotate(${angleDeg}deg)`;
+    anchor!.style.filter=`hue-rotate(${angleDeg}deg)`;
 })
 })
 
