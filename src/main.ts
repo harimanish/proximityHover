@@ -11,7 +11,7 @@ document.addEventListener('mousemove',(e)=>{
 
   
   const angleDeg=angle(x,y,anchorx,anchory);
-  console.log(angleDeg);
+  
    
   eyes.forEach(eye=>{
     eye.style.transform=`rotate(${angleDeg}deg)`;
